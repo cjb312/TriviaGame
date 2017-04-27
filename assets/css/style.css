@@ -1,33 +1,8 @@
-.jumbotron {
-  background-image:url('../images/spacebg.jpg');
-  background-size:100% 100%;
-  font-family: 'Droid Sans Mono', monospace;
-}
-
-
-
-/*centers text in jumbotron*/
-.container .jumbotron {
-	text-align: center;
-  color:#F5C04A;
-}
-
-/*increased width of start button*/
-.btn-group-lg>.btn, .btn-lg {
-	width: 40%;
-}
-
-/*hides the trivia and results page until correct buttons are pressed*/
-#triviaPage, #resultsPage{ 
-	display: none; 
-}
-
-/*changes modal header color to match color scheme of page, border radius change gives rounded edges*/
+/*Modal Styling*/
 .modal-header {
-	border-radius: 6px 6px 0px 0px;
+  border-radius: 6px 6px 0px 0px;
 }
 
-/*allows me to vertically align the modal to my preferences*/
 .modal {
   text-align: center;
   padding: 0!important;
@@ -45,4 +20,25 @@
   display: inline-block;
   text-align: center;
   vertical-align: middle;
+}
+
+/*jumbotron image/size/font/text styling*/
+.jumbotron {
+  background-image:url('../images/spacebg.jpg');
+  background-size:100% 100%;
+  font-family: 'Droid Sans Mono', monospace;
+}
+
+.container .jumbotron {
+	text-align: center;
+  color:#Ff8300;
+}
+
+.btn-group-lg>.btn, .btn-lg {
+	width: 40%;
+}
+
+/*hiding results*/
+#triviaPage, #resultsPage{ 
+	display: none; 
 }

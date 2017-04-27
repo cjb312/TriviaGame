@@ -2,13 +2,13 @@
 <html>
 <head>
 	<title>Space Trivia</title>
-	<!-- linking CSS file -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<!-- linking bootstrap -->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
+
 <body>
-	<!-- jumbotron used for start page-->
+	<!-- start page jumbo-->
 	<div class="container" id="startPage">
 		<br>
  		<div class="jumbotron">
@@ -19,27 +19,28 @@
 			</p>
   		</div>
 	</div>
-	<!-- end jumbotron used for start page -->
 	
-	<!-- jumbotron used for trivia page-->
+	<!-- trivia page jumbo-->
 	<div class="container" id="triviaPage">
 		<br>
  		<div class="jumbotron">
     		<h1 align="text-center">Space Trivia!</h1>
     		<br>
-    		<p>Time Remaining: <span id="timeRemaining">01:30</span></p>
+    		<p>Time Remaining: <span id="timeRemaining">59</span></p>
     		<br>
-    		<!-- trivia questions -->
-    		<!-- trivia question 01 -->
+
+    		<!-- questions -->
+    		<!-- 1 -->
   			<div class="container">
-  				<p>1. What is the closest planet to the Sun??</p>
+  				<p>1. What is the closest planet to the Sun?</p>
   					<label class="radio-inline"><input type="radio" value="true" name="optradio01">Mercury</label>
   					<label class="radio-inline"><input type="radio" value="false" name="optradio01">Venus</label>
   					<label class="radio-inline"><input type="radio" value="false" name="optradio01">Saturn</label>
   					<label class="radio-inline"><input type="radio" value="false" name="optradio01">Jupiter</label>
 			</div>
 			<br>
-			<!-- trivia question 02 -->
+
+			<!--2 -->
 			 <div class="container">
   				<p>2. What is the second biggest planet in the solar system?</p>
   					<label class="radio-inline"><input type="radio" value="false" name="optradio02">Earth</label>
@@ -48,19 +49,18 @@
   					<label class="radio-inline"><input type="radio" value="true" name="optradio02">Saturn</label>
 			</div>
 			<br>
-			<!-- trivia question 03 -->
+
+			<!-- 3 -->
 			 <div class="container">
   				<p>3. What is the hottest planet in the solar system?</p>
- 
   					<label class="radio-inline"><input type="radio" value="false" name="optradio03">Saturn</label>
   					<label class="radio-inline"><input type="radio" value="false" name="optradio03">Mars</label>
   					<label class="radio-inline"><input type="radio" value="false" name="optradio03">The Sun</label>
   					<label class="radio-inline"><input type="radio" value="true" name="optradio03">Venus</label>
 			</div>
 			<br>
-			<br>
-			<br>
-			<!-- Multiple breaks due to background image and text color conflict.  trivia question 04	 -->
+			
+			<!-- 4 -->
 			 <div class="container">
   				<p>4. Which planet is known for its rings surrounding it?</p>
   					<label class="radio-inline"><input type="radio" value="true" name="optradio04">Saturn</label>
@@ -69,27 +69,32 @@
   					<label class="radio-inline"><input type="radio" value="false" name="optradio04">Mars</label>
 			</div>
 			<br>
-			<!-- trivia question 05	 -->
-			 <div class="container">
+
+			<!-- 5	 -->
+			 <div class="container">			 
   				<p>5. What is the name of the first satellite that went into space?</p>
     				<label class="radio-inline"><input type="radio" value="false" name="optradio05">Space Explorer</label>
   					<label class="radio-inline"><input type="radio" value="false" name="optradio05">Star Gazer</label>
   					<label class="radio-inline"><input type="radio" value="true" name="optradio05">Hubble Space Telescope</label>
   					<label class="radio-inline"><input type="radio" value="false" name="optradio05">Telescope of NASA</label>
 			</div>
+
 			<br>
-			<!-- submit button -->
+			<!-- done button -->
 			<br>
+
 			<p>
   				<button type="button" class="btn btn-default btn-lg" id="doneButton">Done</button>
-			</p>								
+			</p>
+
 		</div>
 	</div>
-	<!-- end jumbotron used for trivia page -->
 	
-	<!-- jumbotron used for results page-->
+	<!-- rusults jumbo-->
 	<div class="container" id="resultsPage">
+
 		<br>
+
  		<div class="jumbotron">
     		<h1>Space Trivia</h1>
     		<br>
@@ -99,29 +104,35 @@
     		<p>Incorrect Answers: <span id="incorrectAnswers"></span></p>
     		<p>Unanswered: <span id="unanswered"></span></p>
   		</div>
+
 	</div>
-	<!-- end jumbotron for results page -->
 	
-	<!-- modal -->
+	<!-- bootstrap modal for when time expires -->
 	<div class="container">
-  		<!-- time up modal -->
+
   		<div class="modal fade" id="timeUpModal" role="dialog">
+
     		<div class="modal-dialog modal-sm" align="center">
+
       			<div class="modal-content">
+
        				 <div class="modal-header">
           				<h4 class="modal-title">Time's Up!</h4>
         			</div>
+
         			<div class="modal-body">
           				<p>Let's see how you did!</p>
         			</div>
+
         			<div class="modal-footer">
+
           			<button type="button" class="btn btn-default" id="modalButton" data-dismiss="modal">See Results</button>
         			</div>
+
       			</div>
     		</div>
   		</div>
 	</div>
-	<!-- end modal -->
 
 	<!-- footer -->
 	<footer class="footer text-center">
@@ -130,11 +141,10 @@
         <br>
       </div>
     </footer>
-    <!-- linking jQuery library -->
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<!-- linking bootstrap JS -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<!-- linking JS file -->
 	<script type="text/javascript" src="assets/javascript/app.js"></script>
+
 </body>
 </html>
